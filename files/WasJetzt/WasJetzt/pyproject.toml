@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wasjetzt"
+version = "1.0.0"
+description = "WasJetzt - te întreabă periodic „Was machst du jetzt?” și salvează răspunsurile local."
+requires-python = ">=3.12"
+dependencies = ["PySide6>=6.6,<7", "tzlocal>=5.0", "tzdata>=2024.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wasjetzt = ["resources/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
